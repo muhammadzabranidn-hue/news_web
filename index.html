@@ -6,14 +6,20 @@
     <title>Berita Merah | Kabar terbaru Indonesia</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="progres"></div>
+    <div id="memuat"></div>
+
     <div id="preloader">
-        <div class="loader"></div>
-        <h2>Memuat berita...</h2>
-        <p>Sedang mengambil berita terbaru</p>
+        <div class="tirai a"></div><div class="tirai b"></div>
+        <div class="intro">
+            <div class="logo"><b>Berita</b><i>Merah</i></div>
+            <div class="bar"><span></span></div>
+            <p>Mengambil berita terbaru</p>
+        </div>
     </div>
 
     <div class="topbar"><div class="wrap">
@@ -30,8 +36,8 @@
         </label>
     </div></div>
 
-    <header class="masthead"><div class="wrap">
-        <a class="logo" href="./"><b>BERITA</b><i>MERAH</i></a>
+    <header class="masthead" id="kepala"><div class="wrap">
+        <a class="logo" href="./"><b>Berita</b><i>Merah</i></a>
         <input id="cari" type="search" placeholder="Cari judul atau isi berita" aria-label="Cari berita">
     </div>
     <nav class="wrap" id="kategori" aria-label="Kategori"></nav>
@@ -64,7 +70,7 @@
     </main>
 
     <footer><div class="wrap">
-        <b>BERITA<i>MERAH</i></b>
+        <div class="logo"><b>Berita</b><i>Merah</i></div>
         <p>Agregator berita Indonesia. Semua artikel dimiliki oleh sumber masing-masing dan ditautkan ke situs aslinya.</p>
     </div></footer>
     <script src="script.js"></script>
