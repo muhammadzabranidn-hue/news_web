@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berita Merah | Kabar terbaru Indonesia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="preloader">
+        <div class="loader"></div>
+        <h2>Memuat berita...</h2>
+        <p>Sedang mengambil berita terbaru</p>
+    </div>
+
+    <div class="topbar"><div class="wrap">
+        <span id="tanggal"></span>
+        <label>Sumber berita
+            <select id="sumber">
+                <option value="cnn">CNN Indonesia</option>
+                <option value="cnbc">CNBC Indonesia</option>
+                <option value="republika">Republika</option>
+                <option value="tempo">Tempo</option>
+                <option value="antara">Antara</option>
+                <option value="suara">Suara.com</option>
+            </select>
+        </label>
+    </div></div>
+
+    <header class="masthead"><div class="wrap">
+        <a class="logo" href="./"><b>BERITA</b><i>MERAH</i></a>
+        <input id="cari" type="search" placeholder="Cari judul atau isi berita" aria-label="Cari berita">
+    </div>
+    <nav class="wrap" id="kategori" aria-label="Kategori"></nav>
+    </header>
+
+    <div class="ticker"><div class="wrap">
+        <strong>Terbaru</strong>
+        <div class="track"><div id="ticker-isi"></div></div>
+    </div></div>
+
+    <main class="wrap">
+        <section id="hero" aria-label="Berita utama"></section>
+        <div class="layout">
+            <section>
+                <h2 class="judul-seksi" id="judul-feed">Berita terkini</h2>
+                <div id="berita"></div>
+                <button id="muat" class="btn" hidden>Muat berita lainnya</button>
+            </section>
+            <aside>
+                <h2 class="judul-seksi">Pilihan redaksi</h2>
+                <ol id="pilihan"></ol>
+                <div class="kotak">
+                    <h3>Ikuti kabar harian</h3>
+                    <p>Ringkasan berita penting setiap pagi langsung ke email Anda.</p>
+                    <input type="email" placeholder="Alamat email" aria-label="Email">
+                    <button class="btn">Berlangganan</button>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer><div class="wrap">
+        <b>BERITA<i>MERAH</i></b>
+        <p>Agregator berita Indonesia. Semua artikel dimiliki oleh sumber masing-masing dan ditautkan ke situs aslinya.</p>
+    </div></footer>
+    <script src="script.js"></script>
+</body>
+</html>
