@@ -35,7 +35,7 @@ const kartu = (b,i) => `
         <div><h3>${esc(b.judul)}</h3><p>${esc(b.ringkas)}</p>${meta(b)}</div>
     </a>`
 
-/* reveal saat masuk layar */
+
 const io = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target) } }), {rootMargin:"0px 0px -8% 0px"})
 const amati = () => document.querySelectorAll(".rv:not(.in)").forEach(el => io.observe(el))
 
@@ -95,7 +95,7 @@ function muatBerita(){
         .finally(selesaiMuat)
 }
 
-/* kategori + indikator geser */
+
 $("tanggal").textContent = new Date().toLocaleDateString("id-ID",{weekday:"long",day:"numeric",month:"long",year:"numeric"})
 $("kategori").innerHTML = '<span id="indikator"></span>' + KATEGORI.map(k => `<button data-k="${k[0]}" class="${k[0]===""?"aktif":""}">${k[1]}</button>`).join("")
 function geser(b){
@@ -138,7 +138,7 @@ const mg = $("muat")
 mg.onmousemove = e => { const r = mg.getBoundingClientRect(); mg.style.transform = `translate(${(e.clientX - r.left - r.width/2)*.2}px,${(e.clientY - r.top - r.height/2)*.35}px)` }
 mg.onmouseleave = () => mg.style.transform = ""
 
-/* newsletter */
+
 const nb = document.querySelector(".kotak .btn"), ni = document.querySelector(".kotak input")
 nb.onclick = () => {
     if(!ni.value || !ni.checkValidity()){ ni.classList.remove("salah"); void ni.offsetWidth; ni.classList.add("salah"); ni.focus(); return }
